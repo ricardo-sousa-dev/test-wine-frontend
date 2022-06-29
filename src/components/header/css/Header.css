@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  color: rgb(94, 94, 94);
+  font-family: Open Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a:hover {
+  background-color: #353e52;
+  text-decoration: none;
+}
+
+.header {
+  align-items: center;
+  background-color: #ffc8dd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.button-logo {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.button-logo:focus {
+  outline: none;
+}
+
+.logo {
+  border: none;
+  font-size: 45px;
+  margin-right: 10px;
+  opacity: 0.8;
+  outline: none;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.arrow-left {
+  height: 30px;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.form-control,
+.btn {
+  border: 1px solid rgb(194, 194, 194);
+  color: grey;
+  font-size: 14px;
+}
+
+.div-search {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-cart {
+  align-items: baseline;
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  height: fit-content;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+
+.button-cart:focus {
+  outline: none;
+}
+
+.container-quantity-cart {
+  display: flex;
+  position: absolute;
+}
+
+.fa-shopping-cart {
+  font-size: 40px;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.fa-shopping-cart path {
+  fill: rgba(94, 94, 94, 0.8);
+}
+
+.quantity-products-cart {
+  align-items: center;
+  background-color: #fff !important;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: rgb(94, 94, 94) !important;
+  display: flex;
+  font-size: 14px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.result-searchBar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.clear-search-button {
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.clear-search-button button {
+  background-color: #ffc8dd;
+  border: #353e52;
+  border-radius: 5px;
+  color: #353e52;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  .logo {
+    font-size: 20px;
+    width: 120px;
+  }
+
+  .fa-shopping-cart {
+    font-size: 30px;
+  }
+
+  .button-cart {
+    margin-right: 25px;
+    margin-top: -5px;
+  }
+}

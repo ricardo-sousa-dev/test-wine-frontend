@@ -1,0 +1,16 @@
+.search-empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 140px;
+}
+
+.emoji-empty {
+  font-size: 2em;
+}
+
+.message-empty {
+  font-size: 1em;
+  margin-top: 10px;
+}

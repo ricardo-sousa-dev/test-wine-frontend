@@ -1,0 +1,47 @@
+.payment-method h2 {
+  color: rgb(94, 94, 94);
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.payment-method {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: flex-start;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.payment-method-icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+.payment-method-icons hr {
+  align-self: center;
+  width: 95%;
+}
+
+.payment-select {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 5px;
+  width: 90px;
+}
+
+.payment-select img {
+  margin-left: 5px;
+}
+
+.payment-icon {
+  width: 35px;
+}

@@ -1,0 +1,74 @@
+.cart-shipping {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center;
+}
+
+.cart-shipping h2 {
+  color: rgb(94, 94, 94);
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.cart-shipping-details {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.cart-shipping-details hr {
+  width: 300px;
+}
+
+.shipping-infos {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.shipping-company input {
+  margin-right: 10px;
+}
+
+.shipping-company p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.shipping-timing {
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  margin-top: 5px;
+  max-width: 150px;
+}
+
+.shipping-timing p {
+  color: green;
+  margin-left: 5px;
+}
+
+.shipping-select {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  height: 20px;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.shipping-select span {
+  color: green !important;
+}
+
+.shipping-select button {
+  border: none;
+  margin-left: 10px;
+}

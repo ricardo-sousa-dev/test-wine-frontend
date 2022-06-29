@@ -1,0 +1,25 @@
+.cart-empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  justify-content: space-between;
+}
+
+.div-icon-empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  justify-content: center;
+}
+
+.cart-empty-message {
+  font-size: 25px;
+}
+
+.fa-cart-empty {
+  color: black;
+  font-size: 100px;
+  margin-top: 30px;
+}

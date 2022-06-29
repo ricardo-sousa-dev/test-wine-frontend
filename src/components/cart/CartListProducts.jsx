@@ -32,13 +32,13 @@ function CartListProducts() {
                   className="product-detail-cart"
                   type="button"
                   onClick={() => redirectProductDetails(product)}>
-                  <img
+                  {/* <img
                     className="img-product-cart"
                     src={require(`../../images/products/1-${ replaceSpecialChars(
                       product.name,
                     ) }.jpeg`)}
                     alt={product.name}
-                  />
+                  /> */}
                 </button>
                 <div className="detail-product">
                   <div className='product-delete-button'>

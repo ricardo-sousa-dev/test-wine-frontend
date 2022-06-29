@@ -12,49 +12,49 @@ function CarrouselProductPage(props) {
   return (
     <Carousel className="carousel" slide={false} >
       <Carousel.Item className="carousel-item">
-        <img
+        {/* <img
           className="image-product-detail"
           alt={product.name}
           src={require(`../../images/products/1-${ replaceSpecialChars(
             product.name,
           ) }.jpeg`)}
-        />
+        /> */}
       </Carousel.Item>
       <Carousel.Item className="carousel-item">
-        <img
+        {/* <img
           className="image-product-detail"
           alt={product.name}
           src={require(`../../images/products/2-${ replaceSpecialChars(
             product.name,
           ) }.jpeg`)}
-        />
+        /> */}
       </Carousel.Item>
       <Carousel.Item className="carousel-item">
-        <img
+        {/* <img
           className="image-product-detail"
           alt={product.name}
           src={require(`../../images/products/3-${ replaceSpecialChars(
             product.name,
           ) }.jpeg`)}
-        />
+        /> */}
       </Carousel.Item>
       <Carousel.Item className="carousel-item">
-        <img
+        {/* <img
           className="image-product-detail"
           alt={product.name}
           src={require(`../../images/products/4-${ replaceSpecialChars(
             product.name,
           ) }.jpeg`)}
-        />
+        /> */}
       </Carousel.Item>
       <Carousel.Item className="carousel-item">
-        <img
+        {/* <img
           className="image-product-detail"
           alt={product.name}
           src={require(`../../images/products/5-${ replaceSpecialChars(
             product.name,
           ) }.jpeg`)}
-        />
+        /> */}
       </Carousel.Item>
     </Carousel>
   );

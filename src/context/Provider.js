@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Context from './Context';
-import Database from '../services/database';
 
 function Provider({ children }) {
-  const [ database, setDatabase ] = useState(Database);
+  const [ database, setDatabase ] = useState([]);
   const [ resultSearchBar, setResultSearchBar ] = useState('');
   const [ viewProductDetails, setViewProductDetails ] = useState('');
   const [ totalCart, setTotalCart ] = useState(0);
@@ -35,9 +33,5 @@ function Provider({ children }) {
     </Context.Provider>
   );
 }
-
-Provider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Provider;

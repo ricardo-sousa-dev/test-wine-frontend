@@ -15,8 +15,6 @@ function SearchBar() {
     searchBar,
     setSearchBar } = useContext(Context);
 
-  const { products } = database;
-
   const handleSearchBar = ({ target: { value } }) => {
     setSearchBar(value);
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];

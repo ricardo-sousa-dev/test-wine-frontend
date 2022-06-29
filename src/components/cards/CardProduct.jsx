@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Context from '../../context/Context';
-import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
 import { FavoriteHeartButton } from '../../components'
 import './css/CardProduct.css';
@@ -70,13 +69,13 @@ function CardProduct(props) {
           className="link-product-detail"
           type="button"
           onClick={redirectProductDetails}>
-          <img
+          {/* <img
             src={require(`../../images/products/1-${ replaceSpecialChars(
               product.name,
             ) }.jpeg`)}
             alt={product.name}
             className="thumbnail"
-          />
+          /> */}
           <div className="card-title">
             <h4>{product.name}</h4>
           </div>
@@ -97,12 +96,5 @@ function CardProduct(props) {
     </div>
   );
 }
-
-CardProduct.propTypes = {
-  ean: PropTypes.string,
-  name: PropTypes.string,
-  price: PropTypes.number,
-  categories: PropTypes.arrayOf(PropTypes.string),
-};
 
 export default CardProduct;

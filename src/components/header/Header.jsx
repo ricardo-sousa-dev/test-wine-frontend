@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from 'react';
 import Context from '../../context/Context';
 import { useNavigate, useLocation } from 'react-router';
 import {HeaderSearchBar, CartButton, CardProduct} from '../';
-import Logo from '../../images/logo-singelee.svg';
+import Logo from '../../images/logo-wine.png';
 import { FaArrowLeft } from 'react-icons/fa';
 import './css/Header.css';
 

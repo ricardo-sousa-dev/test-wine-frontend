@@ -1,7 +1,6 @@
-import axios from 'axios';
-
-const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:3001'
-});
-
-export default api; 
+export default async function fetchWines() {
+  const response = await fetch(`https://wine-back-test.herokuapp.com/products?page=1&limit=100`);
+  const data = await response.json();
+  const { items } = data;
+  return items;
+}

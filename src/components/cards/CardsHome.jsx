@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
 import Context from '../../context/Context';
 import './css/CardsHome.css';
 import CardProduct from './CardProduct';
@@ -7,43 +6,24 @@ import Loading from '../home/Loading';
 
 function CardsHome() {
   const { database } = useContext(Context);
-  
+
   const [ loading, setLoading ] = useState(false);
-  
+
   useEffect(() => {
-   
+    console.log(database)
     if (!localStorage.getItem('products')) {
-      localStorage.setItem('products', JSON.stringify(database.products));
+      localStorage.setItem('products', JSON.stringify(database));
     }
     setLoading(false);
   }, []);
 
-  return (<>
-    {loading ? <Loading /> : <div className="categories" id="categories">
-      {database.categoryProducts.map((category) => (
-        category !== 'Revenda' ?
-          <div key={category}>
-            <h2 className="mb-3 col-6 category">{category}</h2>
-            <div className="cards">
-              {database.products.map((product) =>
-                product.categories.some((cat) => cat === category) ? (
-                  <CardProduct key={product.sku} product={product} />
-                ) : null,
-              )}
-            </div>
-          </div> : null
-      ))}
-      <hr />
-    </div>}
+  return (
+    <>
+      {database.length > 0 ? database.map((product) =>
+          <CardProduct key={product.sku} product={product} />
+      ) : <Loading />}
     </>
   );
 }
-
-// CardsHome.propTypes = {
-//   database: PropTypes.shape({
-//     categoryProducts: PropTypes.arrayOf(PropTypes.string),
-//     products: PropTypes.arrayOf(PropTypes.object),
-//   }).isRequired,
-// };
 
 export default CardsHome;

@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  color: rgb(94, 94, 94);
+  font-family: Open Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.social {
+  height: 50vh;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}

@@ -4,7 +4,6 @@ import './css/CartOffCanvas.css';
 import useOnClickOutside from '../../hooks/useOnClickOutside';
 import CartListProducts from './CartListProducts';
 import GoToButton from '../buttons/GoToButton';
-import formatCoin from '../../utils/formatCoin';
 
 function CartOffCanvas() {
 

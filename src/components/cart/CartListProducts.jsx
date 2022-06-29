@@ -3,7 +3,6 @@ import Context from '../../context/Context';
 import { CardSelectQuantityProduct, DeleteProductCartButton, ClearCartButton} from '../../components';
 import './css/CartListProducts.css';
 import { useNavigate } from 'react-router-dom';
-import formatCoin from '../../utils/formatCoin';
 
 function CartListProducts() {
 
@@ -53,7 +52,7 @@ function CartListProducts() {
                       <h3>{product.name}</h3>
                     </div>
                     <p className="price-product-cart">
-                      Preço: {formatCoin(product.price)}
+                      Preço: {product.price}
                     </p>
                   </button>
                   <div className="sum-product-quantity-value">

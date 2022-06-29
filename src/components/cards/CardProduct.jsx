@@ -3,7 +3,6 @@ import Context from '../../context/Context';
 import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
 import { FavoriteHeartButton } from '../../components'
-import formatCoin from '../../utils/formatCoin';
 import './css/CardProduct.css';
 
 function CardProduct(props) {
@@ -82,7 +81,7 @@ function CardProduct(props) {
             <h4>{product.name}</h4>
           </div>
           <div className="card-price">
-            <h4>{formatCoin(product.price)}</h4>
+            <h4>{product.price}</h4>
           </div>
         </button>
       </div>

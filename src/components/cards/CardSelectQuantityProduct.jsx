@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext, useMemo } from 'react';
 import './css/CardSelectQuantityProduct.css';
 import Context from '../../context/Context';
-import formatCoin from '../../utils/formatCoin';
 
 function SelectQuantityProduct(props) {
   const { product } = props;
@@ -24,7 +23,7 @@ function SelectQuantityProduct(props) {
         arrayPricesCart.push(element.price * element.quantity);
       }
     }
-    const totalPriceCart = (formatCoin((arrayPricesCart.reduce((a, b) => a + b, 0)) + 20))
+    const totalPriceCart = ((arrayPricesCart.reduce((a, b) => a + b, 0)) + 20)
     localStorage.setItem('totalPriceCart', JSON.stringify(totalPriceCart));
     setTotalCart(totalPriceCart);
   }, [ localStorageCart, totalCart, setTotalCart ]);
@@ -33,7 +32,7 @@ function SelectQuantityProduct(props) {
     const productInCart = localStorageCart ? localStorageCart.find((productCart) => productCart.name === product.name):null;
     setQuantityInCart(productInCart ? productInCart.quantity : 0);
     setSumPriceProduct(
-      productInCart ? formatCoin(productInCart.quantity * product.price) : 0);
+      productInCart ? productInCart.quantity * product.price : 0);
   }, [ quantityInCart, sumPriceProduct, localStorageCart, product ]);
 
   const decrementCart = () => {

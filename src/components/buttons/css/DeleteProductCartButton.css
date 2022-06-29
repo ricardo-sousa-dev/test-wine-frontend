@@ -1,0 +1,18 @@
+.delete-product-cart-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+}
+
+.delete-product-cart-button path {
+  fill: rgba(128, 128, 128, 0.403);
+  transform: scale(0.7);
+}
+
+.delete-product-cart-button path:hover {
+  fill: #ff0000;
+  transform: scale(0.7);
+}

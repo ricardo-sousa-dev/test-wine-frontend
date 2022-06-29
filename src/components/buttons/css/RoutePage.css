@@ -1,0 +1,23 @@
+.route-page {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.route-link-current {
+  color: rgb(94, 94, 94);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.route-link {
+  color: #ffc8dd;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+.route-link:hover {
+  color: #ffc8dd;
+}

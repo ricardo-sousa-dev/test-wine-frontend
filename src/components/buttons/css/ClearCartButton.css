@@ -1,0 +1,33 @@
+.clear-cart {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 310px;
+  /* background-color:rebeccapurple; */
+}
+
+.clear-cart h2 {
+  color: rgb(94, 94, 94);
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.clear-cart button {
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  font-size: 10px;
+  font-weight: bold;
+  height: 20px;
+  justify-content: center;
+  padding: 5px;
+  width: 210px;
+}
+
+.clear-cart-icon {
+  font-size: 15px;
+  margin-right: 5px;
+}

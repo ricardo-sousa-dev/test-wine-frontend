@@ -1,0 +1,36 @@
+.go-to-button,
+.go-to-button-anchor {
+  align-items: center;
+  border: 1px solid #353e52;
+  border-radius: 5px;
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  justify-content: center;
+  margin-top: 15px;
+  max-width: 315px;
+  min-width: 280px;
+  padding: 0;
+}
+
+.go-to-button-anchor {
+  flex-direction: row;
+}
+
+.go-to-button:hover,
+.go-to-button-anchor:hover {
+  background-color: #353e52 !important;
+}
+
+.text-button {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.icon-button {
+  cursor: pointer;
+  fill: #fff;
+  font-size: 20px;
+}

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  color: rgb(94, 94, 94);
+  font-family: Open Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  align-items: center;
+  background-color: #ffc8dd;
+  box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.51);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px 20px 5px 20px;
+  width: 100%;
+}
+
+.block-1,
+.block-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.block-1 a {
+  color: rgb(94, 94, 94);
+  font-size: 14px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.block-1 a:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.block-2 {
+  justify-content: center;
+}
+
+.block-social {
+  display: flex;
+  font-size: 40px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.social-icon {
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
+  width: 30px;
+}
+
+.social-icon:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.badges {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.badges img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  max-height: 30px;
+}
+
+.block-identity {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.block-identity h3 {
+  color: rgb(94, 94, 94);
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  padding: 0;
+  text-align: center;
+}

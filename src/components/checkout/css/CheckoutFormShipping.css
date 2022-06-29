@@ -1,0 +1,80 @@
+h2 {
+  color: rgb(94, 94, 94);
+  font-size: 20px;
+  margin: 20px;
+  width: 100%;
+}
+
+.info-shipping {
+  border: 1px solid #ffc8dd;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: space-between;
+  margin: 10px;
+  max-width: 450px;
+  padding: 10px;
+}
+
+.item-form {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px 10px;
+  padding: 0;
+  width: max-content;
+}
+
+.info-shipping label {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  height: 30px;
+  margin: 0;
+  min-width: max-content;
+}
+
+.info-shipping input,
+.info-shipping select {
+  border: 0.5px solid rgb(94, 94, 94);
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.cep {
+  width: 120px;
+}
+
+.state {
+  height: 30px;
+}
+
+.address {
+  width: 340px;
+}
+
+.complement {
+  width: 170px;
+}
+
+.number {
+  width: 60px;
+}
+
+.district,
+.city,
+.phone,
+.cpf {
+  width: 135px;
+}
+
+.fullname {
+  width: 300px;
+}
+
+.email {
+  width: 250px;
+}

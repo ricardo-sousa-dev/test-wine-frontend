@@ -29,7 +29,6 @@ function Home() {
       setDatabase(res);
     }
     fetch();
-    console.log('DATABASE: ', database)
   }, []);
 
   return (

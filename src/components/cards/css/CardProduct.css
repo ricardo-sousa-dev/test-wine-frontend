@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   color: rgb(94, 94, 94);
-  font-family: Open Sans, sans-serif;
+  font-family: Lato, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -11,19 +11,47 @@ a:hover {
   text-decoration: none;
 }
 
+.card-container {
+  height: 360px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 10px 0 10px;
+  margin-bottom: 40px;
+}
+
 .card-product {
   align-content: space-between;
   align-items: center;
-  border: 1px groove #ffc8dd;
-  border-radius: 5px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.325);
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  background: white;
   display: flex;
   flex-direction: column;
-  height: 270px;
+  height: 320px;
   justify-content: flex-start;
-  margin: 8px;
-  padding: 10px 0 10px;
-  width: 230px;
+  width: 240px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.card-black-div {
+  position: absolute;
+  align-self: flex-end;
+  width: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-black {
+  margin-top: 100px;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .card-body {
@@ -44,7 +72,9 @@ a:hover {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   margin-bottom: 10px;
-  width: 200px;
+  max-width: 200px;
+  max-height: 150px;
+  z-index: 1;
 }
 
 .card-title,
@@ -53,12 +83,73 @@ a:hover {
   text-align: center;
 }
 
-h4 {
-  font-size: 12px;
+.card-title h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.card-price h4 {
+.card-discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-discount-value {
+  color: rgba(128, 128, 128, 0.734);
+  font-size: 11px;
+  text-decoration-line: line-through;
+  margin-right: 10px;
+}
+
+.card-discount-percent {
+  font-size: 12px;
+  background-color: #f79452d3;
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card-partner {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.card-partner-title {
+  font-size: 11px;
   font-weight: bold;
+  margin-right: 6px;
+}
+
+.card-partner-destak {
+  display: flex;
+  align-items: baseline;
+}
+
+.card-partner-coin,
+.card-partner-value,
+.card-partner-cents {
+  color: #C81A78;
+  font-weight: 700;
+  font-family: Open Sans, sans-serif;
+  margin-right: 3px;
+}
+
+.card-partner-value {
+  margin-right: 0;
+  font-size: 28px;
+}
+
+.card-partner-nopartner {
+  font-size: 11px;
+  color: rgba(128, 128, 128, 0.734);
+  font-weight: 600;
+  font-family: Open Sans, sans-serif;
+  margin-right: 3px;
 }
 
 .card-cart {
@@ -73,15 +164,18 @@ button:hover {
 
 .add-to-cart {
   align-items: center;
-  background-color: #ffc8dd;
-  border-color: rgba(128, 128, 128, 0.239);
-  border-radius: 5px;
-
+  background-color: #7EBC43;
+  color: white;
+  border-radius: 4px;
   display: flex;
   font-size: 10px;
-  height: 25px;
+  height: 40px;
   justify-content: center;
   margin-bottom: 5px;
-  padding: 0 5px;
-  width: 120px;
+  padding: 10px;
+  width: 240px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border:none;
 }

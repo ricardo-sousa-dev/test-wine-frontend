@@ -10,7 +10,6 @@ function CardsHome() {
   const [ loading, setLoading ] = useState(false);
 
   useEffect(() => {
-    console.log(database)
     if (!localStorage.getItem('products')) {
       localStorage.setItem('products', JSON.stringify(database));
     }

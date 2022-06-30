@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import Context from '../../context/Context';
 import { useNavigate } from 'react-router-dom';
 import { FavoriteHeartButton } from '../../components'
+import formatCoin from '../../utils/formatCoin';
+import blackWine from '../../images/black-wine.png';
 import './css/CardProduct.css';
 
 function CardProduct(props) {
@@ -14,7 +16,6 @@ function CardProduct(props) {
     setQuantityCart,
     setViewProductDetails,
     setResultSearchBar,
-    replaceSpecialChars
   } = useContext(Context);
 
   const redirectProductDetails = () => {
@@ -62,27 +63,42 @@ function CardProduct(props) {
   };
 
   return (
-    <div className="card-product">
-      <div className="card-body">
-        <FavoriteHeartButton product={product} />
-        <button
-          className="link-product-detail"
-          type="button"
-          onClick={redirectProductDetails}>
-          {/* <img
-            src={require(`../../images/products/1-${ replaceSpecialChars(
-              product.name,
-            ) }.jpeg`)}
-            alt={product.name}
-            className="thumbnail"
-          /> */}
-          <div className="card-title">
-            <h4>{product.name}</h4>
+    <div className="card-container">
+      <div className="card-product">
+        <div className="card-body">
+          <FavoriteHeartButton product={product} />
+          <div className="card-black-div">
+            <img className="card-black" src={blackWine} alt="Black Wine" />
           </div>
-          <div className="card-price">
-            <h4>{product.price}</h4>
-          </div>
-        </button>
+          <button
+            className="link-product-detail"
+            type="button"
+            onClick={redirectProductDetails}>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="thumbnail"
+            />
+            <div className="card-title">
+              <h4>{product.name}</h4>
+            </div>
+            <div className="card-price">
+              <div className="card-discount">
+                <h4 className="card-discount-value">{formatCoin(((product.discount * product.price) / 100).toFixed(2))}</h4>
+                <h4 className="card-discount-percent">{product.discount}% OFF</h4>
+              </div>
+              <div className="card-partner">
+                <p className="card-partner-title">SÓCIO WINE</p>
+                <div className="card-partner-destak">
+                  <p className="card-partner-coin">R$</p>
+                  <p className="card-partner-value"> {product.priceMember.toFixed()}</p>
+                  <p className="card-partner-cents">,{product.priceMember.toFixed(2).toString().split(".", 2)[ 1 ]}</p>
+                </div>
+              </div>
+              <h4 className="card-partner-nopartner">NÃO SÓCIO {formatCoin(product.priceNonMember.toFixed(2))}</h4>
+            </div>
+          </button>
+        </div>
       </div>
       <div className="card-cart">
         <button
@@ -90,7 +106,7 @@ function CardProduct(props) {
           onClick={addToCart}
           className="add-to-cart"
         >
-          Adicionar ao Carrinho
+          Adicionar
         </button>
       </div>
     </div>

@@ -5,7 +5,6 @@ import './css/CarouselProduct.css';
 
 function CarrouselProductPage(props) {
   const {product} = props;
-  // console.log(product);
 
   const { replaceSpecialChars } = useContext(Context);
 

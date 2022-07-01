@@ -1,7 +1,8 @@
 import React, { useContext, useMemo, useEffect} from 'react';
 import Context from '../../context/Context';
 import { useNavigate } from 'react-router-dom';
-import { FaCartArrowDown } from "react-icons/fa"; 
+import { FaCartArrowDown } from "react-icons/fa";
+import CartWine from '../../images/cart-wine.png'; 
 import './css/GoToButton.css';
 
 function GoToButton() {
@@ -32,7 +33,7 @@ function GoToButton() {
           {quantityCart}
         </div> : null}
       </div>
-      <FaCartArrowDown className="fa-shopping-cart"/>
+      <img src={CartWine} alt="Carrinho"  className="fa-shopping-cart"/>
     </button>
   );
 

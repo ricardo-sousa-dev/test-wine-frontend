@@ -6,16 +6,17 @@ function Provider({ children }) {
   const [ resultSearchBar, setResultSearchBar ] = useState('');
   const [ viewProductDetails, setViewProductDetails ] = useState('');
   const [ totalCart, setTotalCart ] = useState(0);
-
   const [ products, setProducts ] = useState([]);
   const [ productsCart, setProductsCart ] = useState([]);
   const [ quantityCart, setQuantityCart ] = useState(0);
   const [ selectedFavorite, setSelectedFavorite ] = useState(true);
-  const [showModalCart, setShowModalCart] = useState(false);
-  const [searchBar, setSearchBar] = useState('');
-  const [showSearchBar, setShowSearchBar] = useState(false);
+  const [ showModalCart, setShowModalCart ] = useState(false);
+  const [ searchBar, setSearchBar ] = useState('');
+  const [ showSearchBar, setShowSearchBar ] = useState(false);
+  const [ filterPrice, setFilterPrice ] = useState(0);
 
   const providerValue = {
+    filterPrice, setFilterPrice,
     database, setDatabase,
     resultSearchBar, setResultSearchBar,
     viewProductDetails, setViewProductDetails,
@@ -30,8 +31,8 @@ function Provider({ children }) {
   };
 
   return (
-    <Context.Provider value={ providerValue }>
-      { children }
+    <Context.Provider value={providerValue}>
+      {children}
     </Context.Provider>
   );
 }

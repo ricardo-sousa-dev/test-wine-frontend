@@ -6,6 +6,13 @@ body {
   background-color:rgba(215, 215, 215, 0.088);
 }
 
+.home-container{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 ::-webkit-scrollbar {
   background: transparent;
   width: 0px;

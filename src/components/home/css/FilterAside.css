@@ -1,0 +1,54 @@
+.filter-aside {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 160px;
+  position:fixed;
+}
+
+.filter-aside h3 {
+  font-family: 'NeoSansStd', sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.filter-aside h4 {
+  font-family: 'NeoSansStdRegular', sans-serif;
+  line-height: 22px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.radio-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.radio-buttons label{
+  margin-bottom: 10px;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight:400;
+  align-items:center;
+  line-height: 17px;
+  font-size: 14px;
+}
+
+.radio-buttons input{
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  background-color: #EAEAEA;
+}

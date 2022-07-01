@@ -23,8 +23,10 @@ import CardsOtherProductsEmphasis from './cards/CardsOtherProductsEmphasis';
 import FavoriteHeartButton from './buttons/FavoriteHeartButton';
 import CartButton from './buttons/CartButton';
 import ScrollToTop from './navigation/ScrollToTop';
+import FilterAside from'./home/FilterAside';
 
 export {
+  FilterAside,
   ScrollToTop,
   CartButton,
   FavoriteHeartButton,

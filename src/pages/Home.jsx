@@ -8,17 +8,12 @@ import {
   Header,
   CardsHome,
   Footer,
-  CartOffCanvas
+  CartOffCanvas,
+  FilterAside
 } from '../components';
 
 function Home() {
-  const { showModalCart, setShowModalCart, database, setDatabase, } = useContext(Context);
-
-  const fetchProducts = async () => {
-    const response = await axios.get('https://wine-back-test.herokuapp.com/products?page=1&limit=100')
-
-    return response;
-  }
+  const { showModalCart, setShowModalCart, setDatabase, } = useContext(Context);
 
   const localStorageCart = useMemo(() => JSON.parse(localStorage.getItem('cartProducts')));
 
@@ -32,12 +27,15 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="home-page">
       {showModalCart && (localStorageCart && localStorageCart.length > 0) && <CartOffCanvas />}
       <Header />
-      <CardsHome />
+      <div className="home-container">
+        <FilterAside />
+        <CardsHome />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

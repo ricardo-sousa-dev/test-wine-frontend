@@ -2,7 +2,10 @@
 
 @font-face {
   font-family: 'NeoSansStdRegular';
-  font-style: normal;
-  font-weight: 400;
   src: local('NeoSansStdRegular'), url('../src/fonts/NeoSansStdRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NeoSansStd';
+  src: local('NeoSansStd'), url('../src/fonts/NeoSansStd.otf') format('opentype');
 }

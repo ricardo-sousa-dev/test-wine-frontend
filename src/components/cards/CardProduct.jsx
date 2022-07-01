@@ -79,23 +79,25 @@ function CardProduct(props) {
               alt={product.name}
               className="thumbnail"
             />
-            <div className="card-title">
-              <h4>{product.name}</h4>
-            </div>
-            <div className="card-price">
-              <div className="card-discount">
-                <h4 className="card-discount-value">{formatCoin(((product.discount * product.price) / 100).toFixed(2))}</h4>
-                <h4 className="card-discount-percent">{product.discount}% OFF</h4>
+            <div className="card-infos">
+              <div className="card-title">
+                <h4>{product.name}</h4>
               </div>
-              <div className="card-partner">
-                <p className="card-partner-title">SÓCIO WINE</p>
-                <div className="card-partner-destak">
-                  <p className="card-partner-coin">R$</p>
-                  <p className="card-partner-value"> {product.priceMember.toFixed()}</p>
-                  <p className="card-partner-cents">,{product.priceMember.toFixed(2).toString().split(".", 2)[ 1 ]}</p>
+              <div className="card-price">
+                <div className="card-discount">
+                  <h4 className="card-discount-value">{formatCoin(((product.discount * product.price) / 100).toFixed(2))}</h4>
+                  <h4 className="card-discount-percent">{product.discount}% OFF</h4>
                 </div>
+                <div className="card-partner">
+                  <p className="card-partner-title">SÓCIO WINE</p>
+                  <div className="card-partner-destak">
+                    <p className="card-partner-coin">R$</p>
+                    <p className="card-partner-value"> {product.priceMember.toFixed()}</p>
+                    <p className="card-partner-cents">,{product.priceMember.toFixed(2).toString().split(".", 2)[ 1 ]}</p>
+                  </div>
+                </div>
+                <h4 className="card-partner-nopartner">NÃO SÓCIO {formatCoin(product.priceNonMember.toFixed(2))}</h4>
               </div>
-              <h4 className="card-partner-nopartner">NÃO SÓCIO {formatCoin(product.priceNonMember.toFixed(2))}</h4>
             </div>
           </button>
         </div>

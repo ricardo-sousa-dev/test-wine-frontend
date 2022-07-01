@@ -17,11 +17,14 @@ function CardsHome() {
   }, []);
 
   return (
-    <>
-      {database.length > 0 ? database.map((product) =>
+      <div className="cards-home">
+        <div className="quantity-searched">
+          <span className="quantity">X</span> produtos encontrados
+        </div>
+        {database.length > 0 ? database.map((product) =>
           <CardProduct key={product.sku} product={product} />
-      ) : <Loading />}
-    </>
+        ) : <Loading />}
+      </div>
   );
 }
 

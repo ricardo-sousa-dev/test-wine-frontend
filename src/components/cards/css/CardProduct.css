@@ -23,19 +23,17 @@ a:hover {
 }
 
 .card-product {
-  align-content: space-between;
   align-items: center;
   border-radius: 3px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   background: white;
   display: flex;
   flex-direction: column;
-  height: 320px;
-  justify-content: flex-start;
+  min-height: 320px;
+  justify-content: space-between;
   width: 240px;
   margin-bottom: 10px;
   padding-top: 15px;
-  padding-bottom: 10px;
 }
 
 .card-black-div {
@@ -56,15 +54,21 @@ a:hover {
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 10px;
   padding: 0;
+  height:320px;
 }
 
 .link-product-detail {
   background-color: transparent;
   border: none;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .thumbnail {
@@ -73,9 +77,15 @@ a:hover {
   margin-bottom: 10px;
   max-width: 200px;
   max-height: 150px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
+.card-infos{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .card-title,
 .card-price {
   padding: 0 5px;

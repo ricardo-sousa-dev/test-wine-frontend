@@ -1,28 +1,29 @@
 .cards-home {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   margin-left: 220px;
 }
 
-.quantity-searched{
-  padding-left:40px;
-  align-items:center;
+.quantity-searched {
+  padding-left: 20px;
+  align-items: center;
 }
 
-.quantity-searched, .quantity-searched .quantity{
+.quantity-searched,
+.quantity-searched .quantity {
   width: 100%;
-  margin-top:30px;
+  margin-top: 30px;
   font-family: 'Lato', sans-serif;
   font-style: normal;
-  font-weight:400;
+  font-weight: 400;
   font-size: 18px;
   color: #262626;
 
 }
 
-.quantity-searched .quantity{
- font-weight: 700;
- color: #262626
+.quantity-searched .quantity {
+  font-weight: 700;
+  color: #262626
 }

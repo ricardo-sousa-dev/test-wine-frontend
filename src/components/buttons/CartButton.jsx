@@ -22,7 +22,6 @@ function GoToButton() {
     setResultSearchBar([]);
     navigate(page);
     setSelectedFavorite(true)
-    document.getElementById('favorites').checked = false;
     setSearchBar('');
   }
 

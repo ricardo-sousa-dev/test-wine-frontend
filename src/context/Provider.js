@@ -13,8 +13,12 @@ function Provider({ children }) {
   const [ searchBar, setSearchBar ] = useState('');
   const [ showSearchBar, setShowSearchBar ] = useState(false);
   const [ filterPrice, setFilterPrice ] = useState(0);
+  const [ quantityResult, setQuantityResult ] = useState(0);
+  const [ emptyResult, setEmptyResult ] = useState(false);
 
   const providerValue = {
+    emptyResult, setEmptyResult,
+    quantityResult, setQuantityResult,
     filterPrice, setFilterPrice,
     resultSearchBar, setResultSearchBar,
     viewProductDetails, setViewProductDetails,

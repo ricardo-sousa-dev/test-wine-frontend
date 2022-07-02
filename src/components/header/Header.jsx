@@ -13,7 +13,6 @@ function Header() {
   const location = useLocation().pathname;
   const navigate = useNavigate();
   const {
-    resultSearchBar,
     setResultSearchBar,
     setSelectedFavorite,
     setSearchBar,
@@ -25,7 +24,6 @@ function Header() {
     setResultSearchBar([]);
     navigate(page);
     setSelectedFavorite(true)
-    document.getElementById('favorites').checked = false;
     setSearchBar('');
   }
 
@@ -56,7 +54,7 @@ function Header() {
         </Nav>
         <div className="header-buttons">
           <button className="search-button">
-            <img src={SearchButton} className="search-icon" alt="Buscar" />
+            <img src={SearchButton} className="search-icon" alt="Buscar" onClick={() => setShowSearchBar(!showSearchBar)} />
           </button>
           <button className="login-button">
             <img className="login-icon" src={LoginButton} alt="Login" />
@@ -65,16 +63,6 @@ function Header() {
         </div>
       </div>
       {showSearchBar ? <HeaderSearchBar /> : null}
-      {resultSearchBar.length > 0 ? (
-        <div className="result-searchBar">
-          <div className="clear-search-button">
-            <button type="button" onClick={clearSearch}>Limpar pesquisa</button>
-          </div>
-          {resultSearchBar.map((product, i) => (
-            <CardProduct key={i} product={product} />
-          ))}
-        </div>
-      ) : null}
     </>
   );
 }

@@ -9,29 +9,20 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 60px;
   justify-content: flex-start;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 20px 10px;
   width: 100%;
-}
-
-.search {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .div-input {
   align-items: center;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #C81A78;
   border-radius: 15px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  width: 80%;
 }
 
 .div-button-clear-search {
@@ -61,6 +52,8 @@
   justify-content: center;
   margin-left: 5px;
   padding-left: 10px;
+  width: 100%;
+text-align: center;
 }
 
 .div-input input::placeholder {
@@ -77,52 +70,10 @@
   color: transparent;
 }
 
-.div-messages {
-  align-items: center;
-  display: flex;
-  height: 60px;
-  justify-content: center;
-  width: 100%;
-  word-wrap: break-word;
-  margin-bottom: 5px;
-  padding:0;
-  text-align: center;
-}
-
-.message-empty-favorite, .message-empty-result {
-  font-size: 10px;
-  margin:0;
-  padding:0;
-}
-
-.div-favorites {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: nowrap;
-  margin-left: 15px;
-  margin-top: 5px;
-}
-
-.favorites-label {
-  align-items: flex-start;
-  display: flex;
-  font-size: 11px;
-  justify-content: center;
-  margin-left: 5px;
-}
-
 @media (max-width: 550px) {
   .cart-products {
     margin: 10px 0;
     width: 390px;
-  }
-
-  .message {
-    font-size: 10px;
-  }
-
-  .favorites-label {
-    font-size: 10px;
   }
 
   .searchBar,

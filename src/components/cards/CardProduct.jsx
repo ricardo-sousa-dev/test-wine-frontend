@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Context from '../../context/Context';
 import { useNavigate } from 'react-router-dom';
-import { FavoriteHeartButton } from '../../components'
 import formatCoin from '../../utils/formatCoin';
 import blackWine from '../../images/black-wine.png';
 import './css/CardProduct.css';
@@ -66,7 +65,6 @@ function CardProduct(props) {
     <div className="card-container">
       <div className="card-product">
         <div className="card-body">
-          <FavoriteHeartButton product={product} />
           <div className="card-black-div">
             <img className="card-black" src={blackWine} alt="Black Wine" />
           </div>

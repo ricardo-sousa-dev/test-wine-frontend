@@ -1,4 +1,3 @@
-// import BannerCarrossel from './BannerCarrossel'; 
 import CardsHome from '../components/cards/CardsHome';
 import Loading from './home/Loading';
 import Footer from './footer/Footer';
@@ -20,7 +19,6 @@ import DeleteProductCartButton from './buttons/DeleteProductCartButton';
 import GoToButton from './buttons/GoToButton';
 import RoutePage from './buttons/RoutePage';
 import CardsOtherProductsEmphasis from './cards/CardsOtherProductsEmphasis';
-import FavoriteHeartButton from './buttons/FavoriteHeartButton';
 import CartButton from './buttons/CartButton';
 import ScrollToTop from './navigation/ScrollToTop';
 import FilterAside from'./home/FilterAside';
@@ -29,7 +27,6 @@ export {
   FilterAside,
   ScrollToTop,
   CartButton,
-  FavoriteHeartButton,
   CardsOtherProductsEmphasis,
   RoutePage,
   GoToButton,

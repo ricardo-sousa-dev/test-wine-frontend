@@ -9,7 +9,7 @@ function SearchBar() {
 
   const {
     setResultSearchBar,
-    database,
+    products,
     selectedFavorite,
     setSelectedFavorite,
     searchBar,

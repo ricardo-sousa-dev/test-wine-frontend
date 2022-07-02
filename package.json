@@ -61,7 +61,7 @@
       "react-app/jest",
       "plugin:cypress/recommended",
       "stylelint-config-standard"
-  ]
+    ]
   },
   "browserslist": {
     "production": [

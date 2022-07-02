@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Context from './Context';
 
 function Provider({ children }) {
-  const [ database, setDatabase ] = useState([]);
   const [ resultSearchBar, setResultSearchBar ] = useState('');
   const [ viewProductDetails, setViewProductDetails ] = useState('');
   const [ totalCart, setTotalCart ] = useState(0);
@@ -17,7 +16,6 @@ function Provider({ children }) {
 
   const providerValue = {
     filterPrice, setFilterPrice,
-    database, setDatabase,
     resultSearchBar, setResultSearchBar,
     viewProductDetails, setViewProductDetails,
     totalCart, setTotalCart,

@@ -6,13 +6,13 @@
   text-decoration: none;
 }
 
-a {
+.header a {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-a:hover {
+.header a:hover {
   background-color: #353e52;
   text-decoration: none;
 }

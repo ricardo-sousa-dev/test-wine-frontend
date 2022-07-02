@@ -5,25 +5,24 @@ import CardProduct from './CardProduct';
 import Loading from '../home/Loading';
 
 function CardsHome() {
-  const { database } = useContext(Context);
-
+  const { products } = useContext(Context);
   const [ loading, setLoading ] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(10);
 
-  useEffect(() => {
-    if (!localStorage.getItem('products')) {
-      localStorage.setItem('products', JSON.stringify(database));
-    }
-    setLoading(false);
-  }, []);
+  // useEffect(cardsHome)
 
   return (
       <div className="cards-home">
         <div className="quantity-searched">
           <span className="quantity">X</span> produtos encontrados
         </div>
-        {database.length > 0 ? database.map((product) =>
+        {products.length > 0 ? products.map((product) =>
           <CardProduct key={product.sku} product={product} />
         ) : <Loading />}
+        <div className="pagination">
+     
+      </div>
       </div>
   );
 }

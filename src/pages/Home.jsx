@@ -1,6 +1,4 @@
 import React, { useEffect, useContext, useMemo } from 'react';
-const axios = require('axios').default;
-import api from '../api';
 import Context from '../context/Context';
 import './css/Home.css';
 
@@ -13,17 +11,12 @@ import {
 } from '../components';
 
 function Home() {
-  const { showModalCart, setShowModalCart, setDatabase, } = useContext(Context);
+  const { showModalCart, setShowModalCart } = useContext(Context);
 
   const localStorageCart = useMemo(() => JSON.parse(localStorage.getItem('cartProducts')));
 
   useEffect(() => {
     setShowModalCart(false);
-    async function fetch() {
-      const res = await api();
-      setDatabase(res);
-    }
-    fetch();
   }, []);
 
   return (

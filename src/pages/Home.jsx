@@ -1,4 +1,5 @@
-import React, { useEffect, useContext, useMemo } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
+import axios from 'axios';
 import Context from '../context/Context';
 import './css/Home.css';
 
@@ -12,12 +13,24 @@ import {
 
 function Home() {
   const { showModalCart, setShowModalCart } = useContext(Context);
-
   const localStorageCart = useMemo(() => JSON.parse(localStorage.getItem('cartProducts')));
+
+  const { products, setProducts } = useContext(Context);
+  const [ loading, setLoading ] = useState(true);
+
 
   useEffect(() => {
     setShowModalCart(false);
+
+    const fetchProducts = async () => {
+      setLoading(true);
+      const res = await axios.get('https://wine-back-test.herokuapp.com/products?page=1&limit=100');
+      setProducts(res.data.items);
+      setLoading(false);
+    }
+    fetchProducts();
   }, []);
+  
 
   return (
     <div className="home-page">
@@ -25,7 +38,7 @@ function Home() {
       <Header />
       <div className="home-container">
         <FilterAside />
-        <CardsHome />
+        {products && <CardsHome products={products} loading={loading} />}
       </div>
       <Footer />
     </div>

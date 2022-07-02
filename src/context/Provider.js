@@ -5,7 +5,7 @@ function Provider({ children }) {
   const [ resultSearchBar, setResultSearchBar ] = useState('');
   const [ viewProductDetails, setViewProductDetails ] = useState('');
   const [ totalCart, setTotalCart ] = useState(0);
-  const [ products, setProducts ] = useState([]);
+  const [ products, setProducts ] = useState(null);
   const [ productsCart, setProductsCart ] = useState([]);
   const [ quantityCart, setQuantityCart ] = useState(0);
   const [ selectedFavorite, setSelectedFavorite ] = useState(true);

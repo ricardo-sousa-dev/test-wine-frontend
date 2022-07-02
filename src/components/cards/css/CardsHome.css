@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-left: 220px;
-  padding-bottom: 70px;
+  padding-bottom: 20px;
 }
 
 .quantity-searched {
@@ -27,4 +27,49 @@
 .quantity-searched .quantity {
   font-weight: 700;
   color: #262626
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:fit-content;
+  margin-top: 30px;
+}
+
+.pagination ul {
+  display: flex;
+  align-items: center;
+  width:fit-content;
+  flex-wrap: wrap;
+}
+
+.pagination li {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.pagination .pageButton{
+  background-color:white !important;
+  border:1px solid #C81A78 !important;
+  height: 30px !important;
+  width: 30px !important;
+  color: #C81A78 !important;
+  font-weight: normal !important;
+  font-family: 'Lato', sans-serif !important;
+}
+
+.pagination .activeButton {
+  background-color: #C81A78 !important;
+  color: white !important;
+}
+
+.pagination svg path{
+  fill: #C81A78 !important;
 }

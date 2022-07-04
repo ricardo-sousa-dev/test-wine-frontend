@@ -8,39 +8,42 @@ import SearchEmpty from '../header/SearchEmpty';
 
 function CardsHome({ products, loading }) {
 
-  const { resultSearchBar, searchBar, quantityResult } = useContext(Context);
+  const { searchBar, cardsHome } = useContext(Context);
   const [ currentPageData, setCurrentPageData ] = useState(new Array().fill());
 
+
   useEffect(() => {
-    if (resultSearchBar.length > 0) {
-      setCurrentPageData(resultSearchBar);
+    if (cardsHome && cardsHome.length > 0) {
+      setCurrentPageData(cardsHome);
     }
-    if (resultSearchBar.length === 0 && searchBar.length > 0) {
+    if (cardsHome && cardsHome.length === 0 && searchBar.length > 0) {
       setCurrentPageData([]);
     }
-    console.log(currentPageData);
-  }, [ resultSearchBar ]);
+  }, [ cardsHome ]);
 
   if (loading) {
     return <Loading />
   }
 
+
   return (
     <div className="cards-home">
       <div className="quantity-searched">
-        <span className="quantity">{searchBar.length > 0 ? resultSearchBar.length : products.length}</span> produtos encontrados
+        <span className="quantity">{
+          cardsHome && cardsHome.length
+        }</span> produtos encontrados
       </div>
-      {(currentPageData.length > 0 && currentPageData.map((product, i) => <CardProduct key={i} product={product} />))
-        || (resultSearchBar.length > 0 && resultSearchBar.map((product, i) => <CardProduct key={i} product={product} />))}
+      {cardsHome.length > 0 &&
+          cardsHome.map((product, i) => <CardProduct key={i} product={product} />)}
 
-      <SweetPagination
+      {cardsHome.length > 0 ? <SweetPagination
         currentPageData={setCurrentPageData}
-        getData={resultSearchBar.length > 0 ? resultSearchBar : products}
+        getData={cardsHome.length > 0 ? cardsHome : products}
         dataPerPage={12}
         navigation={true}
         getStyle={'pagination'}
-      />
-
+      /> : null}
+      {cardsHome.length === 0 ? <SearchEmpty /> : null}
     </div>
   );
 }

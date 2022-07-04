@@ -15,8 +15,12 @@ function Provider({ children }) {
   const [ filterPrice, setFilterPrice ] = useState(0);
   const [ quantityResult, setQuantityResult ] = useState(0);
   const [ emptyResult, setEmptyResult ] = useState(false);
+  const [ cardsHome, setCardsHome ] = useState([]);
+  const [ searchRadio, setSearchRadio ] = useState(0);
 
   const providerValue = {
+    cardsHome, setCardsHome,
+    searchRadio, setSearchRadio,
     emptyResult, setEmptyResult,
     quantityResult, setQuantityResult,
     filterPrice, setFilterPrice,

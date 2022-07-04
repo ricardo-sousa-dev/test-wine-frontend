@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useMemo } from 'react';
 import axios from 'axios';
 import Context from '../context/Context';
+import Loading from '../components/home/Loading';
 import './css/Home.css';
 
 import {
@@ -12,12 +13,19 @@ import {
 } from '../components';
 
 function Home() {
-  const { showModalCart, setShowModalCart } = useContext(Context);
   const localStorageCart = useMemo(() => JSON.parse(localStorage.getItem('cartProducts')));
 
-  const { products, setProducts, resultSearchBar, quantityResult, setQuantityResult } = useContext(Context);
   const [ loading, setLoading ] = useState(true);
-  const [ showProducts, setShowProducts ] = useState([]);
+
+  const {
+    showModalCart,
+    setShowModalCart,
+    products,
+    setProducts,
+    setQuantityResult,
+    setCardsHome,
+    cardsHome
+  } = useContext(Context);
 
   useEffect(() => {
     setShowModalCart(false);
@@ -26,6 +34,7 @@ function Home() {
       setLoading(true);
       const res = await axios.get('https://wine-back-test.herokuapp.com/products');
       setProducts(res.data.items);
+      setCardsHome(res.data.items);
       setQuantityResult(res.data.items.length);
       setLoading(false);
     }
@@ -37,11 +46,12 @@ function Home() {
     <div className="home-page">
       {showModalCart && (localStorageCart && localStorageCart.length > 0) && <CartOffCanvas />}
       <Header />
-      {quantityResult > 0 ? <div className="home-container">
-        <FilterAside />
-        <CardsHome products={products} loading={loading} />
-      </div>
-        : null}
+      {products && products.length > 0
+        ? <div className="home-container">
+          <FilterAside />
+          <CardsHome products={cardsHome} loading={loading} />
+        </div>
+        : <Loading />}
       <Footer />
     </div>
   );

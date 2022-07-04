@@ -5,11 +5,10 @@ import './css/HeaderSearchBar.css';
 function SearchBar() {
 
   const {
-    setResultSearchBar,
     products,
     searchBar,
     setSearchBar,
-    setQuantityResult,
+    setCardsHome,
     setEmptyResult } = useContext(Context);
 
   const handleSearchBar = ({ target: { value } }) => {
@@ -22,24 +21,21 @@ function SearchBar() {
       )
       if (productsFiltered && productsFiltered.length > 0) { // case products exists and contains the search
         setEmptyResult(false);
-        setResultSearchBar(productsFiltered);
-        setQuantityResult(productsFiltered.length);
+        setCardsHome(productsFiltered);
 
       } else { // case products doesn't exist
         setEmptyResult(true);
-        setResultSearchBar(products)
-        setQuantityResult(0);
+        setCardsHome([])
       }
 
     } else {
       setEmptyResult(false);
-      setResultSearchBar(products);
-      setQuantityResult(products.length);
+      setCardsHome(products);
     }
   }
 
   const clearSearch = () => {
-    setResultSearchBar(products);
+    setCardsHome(products);
     setSearchBar('');
     setEmptyResult(false);
   }

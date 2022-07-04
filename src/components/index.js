@@ -18,7 +18,6 @@ import ClearCartButton from './buttons/ClearCartButton';
 import DeleteProductCartButton from './buttons/DeleteProductCartButton';
 import GoToButton from './buttons/GoToButton';
 import RoutePage from './buttons/RoutePage';
-import CardsOtherProductsEmphasis from './cards/CardsOtherProductsEmphasis';
 import CartButton from './buttons/CartButton';
 import ScrollToTop from './navigation/ScrollToTop';
 import FilterAside from'./home/FilterAside';
@@ -27,7 +26,6 @@ export {
   FilterAside,
   ScrollToTop,
   CartButton,
-  CardsOtherProductsEmphasis,
   RoutePage,
   GoToButton,
   CardProduct,

@@ -8,6 +8,12 @@
   padding: 15px;
   margin-top: 30px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
 
 .social-media {

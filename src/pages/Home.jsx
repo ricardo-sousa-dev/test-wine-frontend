@@ -42,18 +42,21 @@ function Home() {
   }, []);
 
 
-  return (
+  return (<>
+    {showModalCart && (localStorageCart && localStorageCart.length > 0) && <CartOffCanvas />}
+    <Header />
     <div className="home-page">
-      {showModalCart && (localStorageCart && localStorageCart.length > 0) && <CartOffCanvas />}
-      <Header />
-      {products && products.length > 0
-        ? <div className="home-container">
-          <FilterAside />
-          <CardsHome products={cardsHome} loading={loading} />
-        </div>
-        : <Loading />}
+      <div className="home-body">
+        {products && products.length > 0
+          ? <div className="home-cards">
+            <FilterAside />
+            <CardsHome products={cardsHome} loading={loading} />
+          </div>
+          : <Loading />}
+      </div>
       <Footer />
     </div>
+  </>
   );
 }
 
